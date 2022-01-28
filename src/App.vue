@@ -1,20 +1,20 @@
 <template>
-  123
-<!--  <img alt="Vue logo" src="./assets/logo.png" />-->
-<!--  <HelloWorld msg="Hello Vue 3.0 + Vite" />-->
-  <Frank/>
+  <div>
+    导航栏
+    <router-link to="/">Frank1</router-link>
+    <router-link to="/2">Frank2</router-link>
+  </div>
+  <router-view/>
 </template>
 
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Frank from "./components/Frank.vue"
+// import Frank from "./components/Frank.vue"
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld,
-    Frank
-  }
+  // components: {
+  //   Frank
+  // }
 }
 </script>
