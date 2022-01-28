@@ -1,8 +1,8 @@
 <template>
   <div>
     导航栏
-    <router-link to="/">Frank1</router-link>
-    <router-link to="/2">Frank2</router-link>
+    <router-link to="/">Home</router-link>
+    <router-link to="/doc">Doc</router-link>
   </div>
   <router-view/>
 </template>
