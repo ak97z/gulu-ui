@@ -1,5 +1,3 @@
 <template>
-  <div>
-    ButtonDemo的内容
-  </div>
+123
 </template>
