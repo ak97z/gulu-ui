@@ -1,5 +1,6 @@
 <template>
   <div>
+    Switch组件
     <Switch v-model:value="y"/>
   </div>
 </template>
