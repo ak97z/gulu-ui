@@ -1,8 +1,11 @@
 <template>
   <div>Dialog示例</div>
   <Button @click="toggle">toggle</Button>
-  <Dialog v-model:visible="x" :closeOnClickOverlay="false" :ok="f1" :cancel="f2"/>
+  <Dialog v-model:visible="x" :closeOnClickOverlay="false" :ok="f1" :cancel="f2">
+   <div>自定义内容</div>
+  </Dialog>
   <!--   <Dialog :visible="x" @update:visible="x = $event"/>-->
+
 </template>
 
 <script lang="ts">
