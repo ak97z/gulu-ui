@@ -2,7 +2,12 @@
   <div>Dialog示例</div>
   <Button @click="toggle">toggle</Button>
   <Dialog v-model:visible="x" :closeOnClickOverlay="false" :ok="f1" :cancel="f2">
-   <div>自定义内容</div>
+    <template v-slot:content>
+      <div>自定义内容</div>
+    </template>
+    <template v-slot:title>
+      <strong>自定义标题</strong>
+    </template>
   </Dialog>
   <!--   <Dialog :visible="x" @update:visible="x = $event"/>-->
 
