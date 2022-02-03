@@ -84,14 +84,15 @@ export default {
   > main {
     flex-grow: 1;
     padding: 16px;
-    background: lightgreen;
+    //todo 背景调一下
+    //background: grey;
   }
 }
 
 aside {
   background: lightblue;
   width: 150px;
-  padding: 16px;
+  padding: 16px 0;
   position: fixed;
   top: 0;
   left: 0;
