@@ -1,6 +1,6 @@
 {
-  "name": "gulu-UI-1",
-  "version": "0.0.0",
+  "name": "gulu",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
@@ -17,5 +17,20 @@
     "@vue/compiler-sfc": "^3.0.0-rc.1",
     "sass": "1.26.10",
     "vite": "^1.0.0-rc.1"
-  }
+  },
+  "description": "<hr>\r 作者:ak97",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ak97z/gulu-ui.git"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "ak97z",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ak97z/gulu-ui/issues"
+  },
+  "homepage": "https://github.com/ak97z/gulu-ui#readme"
 }
