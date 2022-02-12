@@ -28,7 +28,9 @@
           </li>
           <li>
             <router-link to="/doc/tabs">Tabs</router-link>
-          </li>
+          </li><li>
+          <router-link to="/doc/input">Input</router-link>
+        </li>
         </ol>
       </aside>
       <main>

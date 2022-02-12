@@ -56,9 +56,6 @@
     <div>
       <Button icon-position='right' icon="setting"  >字体</Button>
       <Button icon-position='left' icon="setting"  >字体</Button>
-      <Button icon-position='right' icon="setting"  >字体</Button>
-      <Button icon-position='left' icon="setting"  >字体</Button>
-
     </div>
   </div>
 </template>
