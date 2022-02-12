@@ -54,10 +54,10 @@
     </div>
     <h1>示例6</h1>
     <div>
-      <Button icon-position='right' icon="setting"  >1</Button>
-      <Button icon-position='left' icon="setting"  theme="button" >2</Button>
-      <Button theme="link">3</Button>
-      <Button theme="text" >4</Button>
+      <Button icon-position='right' icon="setting"  >字体</Button>
+      <Button icon-position='left' icon="setting"  >字体</Button>
+      <Button icon-position='right' icon="setting"  >字体</Button>
+      <Button icon-position='left' icon="setting"  >字体</Button>
 
     </div>
   </div>

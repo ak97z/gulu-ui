@@ -96,8 +96,7 @@ $grey: grey;
 
     > .icon {
       order: 2;
-      margin-right: 0;
-      margin-left: .1em;
+
     }
   }
 
@@ -118,6 +117,8 @@ $grey: grey;
   &.icon {
     height: 1em;
     width: 1em;
+    margin-right: 0;
+    margin-left: .1em;
   }
 
   &.gulu-size-big {
