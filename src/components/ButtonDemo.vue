@@ -47,10 +47,18 @@
     </div>
     <h1>示例5</h1>
     <div>
-      <Button loading>加载中</Button>
+      <Button loading>加载中</Button><Button >加载完毕</Button>
     </div>
     <div>
-      <Button >加载完毕</Button>
+
+    </div>
+    <h1>示例6</h1>
+    <div>
+      <Button icon-position='right' icon="setting"  >1</Button>
+      <Button icon-position='left' icon="setting"  theme="button" >2</Button>
+      <Button theme="link">3</Button>
+      <Button theme="text" >4</Button>
+
     </div>
   </div>
 </template>

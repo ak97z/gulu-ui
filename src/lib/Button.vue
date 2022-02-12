@@ -1,7 +1,15 @@
 <template>
   <button class="gulu-button" :class=classes :disabled="disabled">
     <span v-if="loading" class="gulu-loadingIndicator"></span>
-    <slot/>
+    <svg v-if=icon class="icon">
+      <use :xlink:href="`#icon-${icon}`"></use>
+    </svg>
+    <div class="content">
+      <slot/>
+    </div>
+
+
+
   </button>
 </template>
 
@@ -18,26 +26,33 @@ export default {
       type: String,
       default: 'normal',
     },
-    level:{
-      type:String,
-      default:"normal"
+    level: {
+      type: String,
+      default: 'normal'
     },
-    disabled:{
-      type:Boolean,
-      default:false
+    disabled: {
+      type: Boolean,
+      default: false
     },
-    loading:{
-      type:Boolean,
-      default:false
+    loading: {
+      type: Boolean,
+      default: false
     },
+    iconPosition: {
+      type: String,
+      default: 'left',
+    },
+    icon: {},
   },
   setup(props) {
-    const {theme, size,level} = props;
+    const {theme, size, level, icon, iconPosition} = props;
     const classes = computed(() => {
       return {
         [`gulu-theme-${theme}`]: theme,
         [`gulu-size-${size}`]: size,
         [`gulu-level-${level}`]: level,
+        [`gulu-icon-${icon}`]: icon,
+        [`gulu-iconPosition-${iconPosition}`]: iconPosition,
       };
     });
     return {classes};
@@ -59,6 +74,7 @@ $grey: grey;
   padding: 0 12px;
   cursor: pointer;
   display: inline-flex;
+  vertical-align: middle;
   justify-content: center;
   align-items: center;
   white-space: nowrap;
@@ -68,8 +84,21 @@ $grey: grey;
   border-radius: $radius;
   box-shadow: 0 1px 0 fade-out(black, 0.95);
   transition: background 250ms;
+
   & + & {
     margin-left: 8px;
+  }
+
+  &.gulu-iconPosition-right {
+    > .content {
+      order: 1;
+    }
+
+    > .icon {
+      order: 2;
+      margin-right: 0;
+      margin-left: .1em;
+    }
   }
 
   &:hover,
@@ -86,6 +115,11 @@ $grey: grey;
     border: 0;
   }
 
+  &.icon {
+    height: 1em;
+    width: 1em;
+  }
+
   &.gulu-size-big {
     font-size: 24px;
     height: 48px;
@@ -97,21 +131,25 @@ $grey: grey;
     height: 20px;
     padding: 0 4px;
   }
+
   &.gulu-theme-button {
     &.gulu-level-main {
       background: $blue;
       color: white;
       border-color: $blue;
+
       &:hover,
       &:focus {
         background: darken($blue, 10%);
         border-color: darken($blue, 10%);
       }
     }
+
     &.gulu-level-danger {
       background: $red;
       border-color: $red;
       color: white;
+
       &:hover,
       &:focus {
         background: darken($red, 10%);
@@ -119,47 +157,57 @@ $grey: grey;
       }
     }
   }
+
   &.gulu-theme-link {
     &.gulu-level-danger {
       color: $red;
+
       &:hover,
       &:focus {
         color: darken($red, 10%);
       }
     }
   }
+
   &.gulu-theme-text {
     &.gulu-level-main {
       color: $blue;
+
       &:hover,
       &:focus {
         color: darken($blue, 10%);
       }
     }
+
     &.gulu-level-danger {
       color: $red;
+
       &:hover,
       &:focus {
         color: darken($red, 10%);
       }
     }
   }
+
   &.gulu-theme-button {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
+
       &:hover {
         border-color: $grey;
       }
     }
   }
+
   &.gulu-theme-link, &.gulu-theme-text {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
     }
   }
-  > .gulu-loadingIndicator{
+
+  > .gulu-loadingIndicator {
     width: 14px;
     height: 14px;
     display: inline-block;
@@ -171,9 +219,14 @@ $grey: grey;
     animation: gulu-spin 1s infinite linear;
   }
 }
+
 @keyframes gulu-spin {
-  0%{transform: rotate(0deg)}
-  100%{transform: rotate(360deg)}
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg)
+  }
 }
 
 </style>
