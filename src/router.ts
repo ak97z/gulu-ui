@@ -6,6 +6,7 @@ import DialogDemo from './components/DialogDemo.vue';
 import TabsDemo from './components/TabsDemo.vue';
 import SwitchDemo from './components/SwitchDemo.vue';
 import InputDemo from './components/InputDemo.vue';
+import GridDemo from './components/GridDemo.vue';
 import intro from './markdown/intro.md';
 import getStarted from './markdown/get-started.md';
 import install from './markdown/install.md';
@@ -29,6 +30,7 @@ export const router = createRouter({
                 {path: 'dialog', component: DialogDemo},
                 {path: 'tabs', component: TabsDemo},
                 {path: 'input', component: InputDemo},
+                {path: 'grid', component: GridDemo},
             ]
         }
     ]
