@@ -6,8 +6,16 @@
 
   </div>
 </template>
-<script>
+<script lang="ts">
+import {inject, ref} from "vue";
+
 export default {
+  setup(){
+    const gut=inject('xxx')
+    // console.log(gut);
+
+    // console.log('传进来没有'+gut.value);
+  },
   props: {
 
     span: {

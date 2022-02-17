@@ -30,7 +30,7 @@ export const router = createRouter({
                 {path: 'dialog', component: DialogDemo},
                 {path: 'tabs', component: TabsDemo},
                 {path: 'input', component: InputDemo},
-                {path: 'grid', component: GridDemo},
+                // {path: 'grid', component: GridDemo},
             ]
         }
     ]

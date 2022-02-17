@@ -1,11 +1,11 @@
 <template>
   <h1>Row示例</h1>
-  <Row>
+  <Row gutter="1">
     <Col span="1">1</Col>
     <Col span="3">2</Col>
     <Col span="20">3</Col>
   </Row>
-  <Row>
+  <Row gutter="2">
     <Col >11</Col>
     <Col >22</Col>
     <Col >33</Col>

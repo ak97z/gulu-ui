@@ -5,10 +5,21 @@
 </template>
 <script>
 import Col from "./Col.vue";
+import {provide, ref} from "vue";
+
 export default {
 components:{
   Col
 },
+  setup(){
+    function gutter() {
+      let gutter = props.gutter
+
+    }
+
+    const gut=ref(gutter)
+      provide('xxx',gut)
+  },
   props: {
     gutter: {
       type: [Number, String]
@@ -16,13 +27,16 @@ components:{
   },
   created () {
     console.log('row created')
+
   },
   mounted () {
+
     console.log('row mounted')
+    console.log(this)
     console.log(this.$children)
-    this.$children.forEach((vm) => {
-      vm.gutter = this.gutter
-    })
+    // this.$children.forEach((vm) => {
+    //   vm.gutter = this.gutter
+    // })
   }
 }
 
