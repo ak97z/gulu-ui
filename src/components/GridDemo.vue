@@ -1,14 +1,14 @@
 <template>
   <h1>Row示例</h1>
-  <Row gutter="1">
+  <Row gutter="10">
     <Col span="1">1</Col>
     <Col span="3">2</Col>
     <Col span="20">3</Col>
   </Row>
-  <Row gutter="2">
-    <Col >11</Col>
-    <Col >22</Col>
-    <Col >33</Col>
+  <Row gutter="20">
+    <Col span="20">11</Col>
+    <Col span="3">22</Col>
+    <Col span="1">33</Col>
   </Row>
 </template>
 <script>

@@ -33,7 +33,7 @@
             <router-link to="/doc/input">Input</router-link>
           </li>
           <li>
-<!--            <router-link to="/doc/grid">Grid</router-link>-->
+            <router-link to="/doc/grid">Grid</router-link>
           </li>
 
         </ol>

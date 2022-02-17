@@ -11,15 +11,19 @@ export default {
 components:{
   Col
 },
-  setup(){
-    function gutter() {
-      let gutter = props.gutter
+  computed: {
+    style() {
+      const ret = {};
 
+      if (this.gutter) {
+        ret.marginLeft = `-${this.gutter / 2}px`;
+        ret.marginRight = ret.marginLeft;
+      }
+
+      return ret;
     }
-
-    const gut=ref(gutter)
-      provide('xxx',gut)
   },
+
   props: {
     gutter: {
       type: [Number, String]

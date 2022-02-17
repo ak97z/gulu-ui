@@ -1,31 +1,51 @@
 <template>
-  <div class="col" :class="[span && `col-${span}`]" :style="{paddingLeft: gutter/2+'px', paddingRight: gutter/2+'px'}">
+  <div class="col" :class="[span && `col-span-${span}`,gutter && `col-gutter-${gutter}`]"
+       :style="{paddingLeft: gutter/2+'px', paddingRight: gutter/2+'px'}"
+  >
     <div style="border: 1px solid green; height: 100px;">
       <slot></slot>
     </div>
 
   </div>
 </template>
-<script lang="ts">
-import {inject, ref} from "vue";
+<script>
+
 
 export default {
-  setup(){
-    const gut=inject('xxx')
-    // console.log(gut);
 
-    // console.log('传进来没有'+gut.value);
-  },
+  // computed: {
+  //   gutter() {
+  //     let parent = this.$parent;
+  //     console.log(parent.gutter);
+  //     while (parent && parent.$options.componentName !== 'Row') {
+  //       parent = parent.$parent;
+  //     }
+  //     return parent ? parent.gutter : 0;
+  //
+  //   },
+  // },
+
   props: {
-
+    // gutter: {
+    // default:parent.gutter
+    // },
     span: {
       type: [String, Number]
     }
   },
   data() {
-    return {gutter: 0}
+    // console.log("render"+this.$parent.gutter);
+    // let parent = this.$parent;
+    // return {gutter: this.$parent.gutter}
+    return {gutter: this.$parent.gutter}
   },
-
+  // render(h) {
+  //   console.log("render"+parent.gutter);
+  //   if (parent.gutter) {
+  //     style.paddingLeft = this.gutter / 2 + 'px';
+  //     style.paddingRight = style.paddingLeft;
+  //   }
+  // },
 }
 </script>
 <style lang="scss" scoped>
@@ -33,7 +53,7 @@ export default {
 
   width: 50%;
   height: 100px;
-  $class-prefix: col-;
+  $class-prefix: col-span-;
   @for $n from 1 through 24 {
     &.#{$class-prefix}#{$n} {
       width: ($n/24)*100%;
