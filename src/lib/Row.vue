@@ -11,37 +11,37 @@ export default {
 components:{
   Col
 },
-  computed: {
-    style() {
-      const ret = {};
+  // computed: {
+  //   style() {
+      // const ret = {};
 
-      if (this.gutter) {
-        ret.marginLeft = `-${this.gutter / 2}px`;
-        ret.marginRight = ret.marginLeft;
-      }
+      // if (this.gutter) {
+      //   ret.marginLeft = `-${this.gutter / 2}px`;
+      //   ret.marginRight = ret.marginLeft;
+      // }
 
-      return ret;
-    }
-  },
+  //     // return ret;
+  //   }
+  // },
 
   props: {
     gutter: {
       type: [Number, String]
     }
   },
-  created () {
-    console.log('row created')
-
-  },
-  mounted () {
-
-    console.log('row mounted')
-    console.log(this)
-    console.log(this.$children)
-    // this.$children.forEach((vm) => {
-    //   vm.gutter = this.gutter
-    // })
-  }
+  // created () {
+  //   console.log('row created')
+  //
+  // },
+  // mounted () {
+  //
+  //   console.log('row mounted')
+  //   console.log(this)
+  //   console.log(this.$children)
+  //   // this.$children.forEach((vm) => {
+  //   //   vm.gutter = this.gutter
+  //   // })
+  // }
 }
 
 </script>
