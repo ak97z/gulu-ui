@@ -18,8 +18,7 @@ import {computed} from 'vue';
 
 export default {
   props: {
-    theme: {
-      type: String,
+    theme: {type: String,
       default: 'button',
     },
     size: {

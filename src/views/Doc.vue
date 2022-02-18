@@ -35,7 +35,9 @@
           <li>
             <router-link to="/doc/grid">Grid</router-link>
           </li>
-
+          <li>
+            <router-link to="/doc/layout">Layout</router-link>
+          </li>
         </ol>
       </aside>
       <main>
