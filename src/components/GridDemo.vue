@@ -1,23 +1,15 @@
 <template>
   <h1>Row示例</h1>
-  <Row gutter="10">
-    <Col span="1"><Col>4</Col>1</Col>
-    <Col span="3">2</Col>
-    <Col span="20">3</Col>
-  </Row>
-  <Row gutter="20">
-    <Col span="20">11</Col>
-    <Col span="3">22</Col>
-    <Col span="1">33</Col>
-  </Row>
+  <Demo :component="Grid1Demo"/>
+  <Demo :component="Grid2Demo"/>
 </template>
 <script>
-import Row from "../lib/Row.vue";
-import Col from "../lib/Col.vue";
+import Grid1Demo from './Grid1.demo.vue';
+import Grid2Demo from './Grid2.demo.vue';
+import Demo from './Demo.vue';
 
 export default {
-  components:{
-    Row,Col,
-  }
+  components: {Demo,},
+  setup() {return {Grid1Demo, Grid2Demo}}
 }
 </script>
