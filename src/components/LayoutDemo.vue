@@ -1,61 +1,20 @@
 <template>
-  <div>
-    Layout组件
-    <h1>示例一</h1>
-      <Layout style="height: 20vh;width: 20vw;">
-        <Header>头Header</Header>
-        <Content>主要Content</Content>
-        <Footer>足Footer</Footer>
-      </Layout>
-
-    <h1>示例二</h1>
-    <Layout style="height: 20vh;width: 20vw;">
-      <Header>头Header</Header>
-      <Layout class="hasSider">
-        <Sider>侧边Sider</Sider>
-        <Content>主要Content</Content>
-      </Layout>
-      <Footer>足Footer</Footer>
-    </Layout>
-
-    <h1>示例三</h1>
-    <Layout style="height: 20vh;width: 20vw;">
-      <Header>头Header</Header>
-      <Layout  class="hasSider">
-        <Content>主要Content</Content>
-        <Sider>侧边Sider</Sider>
-      </Layout>
-      <Footer>足Footer</Footer>
-    </Layout>
-    <h1>示例四</h1>
-    <Layout class="hasSider" style="height: 20vh;width: 20vw;">
-      <Sider>侧边Sider</Sider>
-      <Layout>
-      <Header>头Header</Header>
-      <Content>主要Content</Content>
-      <Footer>足Footer</Footer>
-      </Layout>
-    </Layout>
-  </div>
+  <h1>Layout组件</h1>
+  <Demo :component="Layout1Demo"/>
+  <Demo :component="Layout2Demo"/>
+  <Demo :component="Layout3Demo"/>
+  <Demo :component="Layout4Demo"/>
 </template>
 <script>
-import Content from "../lib/Content.vue";
-import Layout from "../lib/Layout.vue";
-import Header from "../lib/Header.vue";
-import Footer from "../lib/Footer.vue";
-import Sider from "../lib/Sider.vue";
+import Demo from './Demo.vue';
+import Layout1Demo from './Layout1.demo.vue';
+import Layout2Demo from './Layout2.demo.vue';
+import Layout3Demo from './Layout3.demo.vue';
+import Layout4Demo from './Layout4.demo.vue';
+
 
 export default {
-  components: {Sider, Footer, Header, Layout, Content}
+  components: {Demo},
+  setup() {return {Layout1Demo, Layout2Demo, Layout3Demo, Layout4Demo,}}
 }
 </script>
-<style lang="scss" scoped>
-* {
-  border: blue 1px solid;
-}
-
-.demo {
-  width: 200px;
-  height: 200px;
-}
-</style>

@@ -9,7 +9,7 @@ import Grid2Demo from './Grid2.demo.vue';
 import Demo from './Demo.vue';
 
 export default {
-  components: {Demo,},
+  components: {Demo},
   setup() {return {Grid1Demo, Grid2Demo}}
 }
 </script>

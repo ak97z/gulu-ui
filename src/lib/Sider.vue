@@ -10,6 +10,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.sider {
+.sider {background: #b3d4fc;
 }
 </style>
