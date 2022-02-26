@@ -7,10 +7,10 @@
 </template>
 <script>
 import Demo from './Demo.vue';
-import Layout1Demo from './Layout1.demo.vue';
-import Layout2Demo from './Layout2.demo.vue';
-import Layout3Demo from './Layout3.demo.vue';
-import Layout4Demo from './Layout4.demo.vue';
+import Layout1Demo from './Layout/Layout1.demo.vue';
+import Layout2Demo from './Layout/Layout2.demo.vue';
+import Layout3Demo from './Layout/Layout3.demo.vue';
+import Layout4Demo from './Layout/Layout4.demo.vue';
 
 
 export default {

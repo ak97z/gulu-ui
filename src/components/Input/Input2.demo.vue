@@ -6,7 +6,7 @@
 
 </template>
 <script>
-import Input from "../lib/Input.vue";
+import Input from "../../lib/Input.vue";
 export default {
   components: {Input}
 }

@@ -4,8 +4,8 @@
   <Demo :component="Grid2Demo"/>
 </template>
 <script>
-import Grid1Demo from './Grid1.demo.vue';
-import Grid2Demo from './Grid2.demo.vue';
+import Grid1Demo from './Grid/Grid1.demo.vue';
+import Grid2Demo from './Grid/Grid2.demo.vue';
 import Demo from './Demo.vue';
 
 export default {

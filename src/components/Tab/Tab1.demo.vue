@@ -6,10 +6,10 @@
   </Tabs>
 </template>
 <script lang="ts">
-import Tabs from '../lib/Tabs.vue';
-import Tab from '../lib/Tab.vue';
+import Tabs from '../../lib/Tabs.vue';
+import Tab from '../../lib/Tab.vue';
 import {ref} from 'vue';
-import Demo from './Demo.vue';
+import Demo from '../Demo.vue';
 
 export default {
   components: {Demo, Tabs, Tab,},

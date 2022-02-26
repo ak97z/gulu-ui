@@ -7,9 +7,9 @@
 
 </template>
 <script>
-import Input1Demo from './Input1.demo.vue';
-import Input2Demo from './Input2.demo.vue';
-import Input3Demo from './Input3.demo.vue';
+import Input1Demo from './Input/Input1.demo.vue';
+import Input2Demo from './Input/Input2.demo.vue';
+import Input3Demo from './Input/Input3.demo.vue';
 import Demo from './Demo.vue';
 
 export default {
