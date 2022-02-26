@@ -1,13 +1,19 @@
 <template>
   <h1>Input示例1</h1>
-  <Input value="第一天,错误信息" error="输入不合法,请重新输入"/>
-  <Input value="第二天,不可选" disabled/>
-  <Input value="第三天,只读" readonly/>
+  <Demo :component="Input1Demo"/>
+  <Demo :component="Input2Demo"/>
+  <Demo :component="Input3Demo"/>
+
 
 </template>
 <script>
-import Input from "../lib/Input.vue";
+import Input1Demo from './Input1.demo.vue';
+import Input2Demo from './Input2.demo.vue';
+import Input3Demo from './Input3.demo.vue';
+import Demo from './Demo.vue';
+
 export default {
-  components: {Input}
+  components: {Demo},
+  setup() {return {Input1Demo, Input2Demo,Input3Demo}}
 }
 </script>
