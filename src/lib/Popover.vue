@@ -3,83 +3,85 @@
     <div ref="contentWrapper" class="content-wrapper" v-if="visible"
          :class="{[`position-${position}`]:true}">
       <slot name="content">
-        <div>{{content}}</div>
+        <div>{{ content }}</div>
       </slot>
     </div>
     <span ref="triggerWrapper" style="display: inline-block;">
-      <slot ></slot>
+      <slot></slot>
     </span>
   </div>
 </template>
 <script>
 export default {
-  props:{
-    content:String,
+  props: {
+    content: String,
 
-      position: {
-        type: String,
-        default: 'top',
-        validator (value) {
-          return ['top', 'bottom', 'left', 'right'].indexOf(value) >= 0
-        }
+    position: {
+      type: String,
+      default: 'top',
+      validator(value) {
+        return ['top', 'bottom', 'left', 'right'].indexOf(value) >= 0
       }
+    }
   },
   data() {
     return {visible: false}
   },
   methods: {
-
-    open() {
-      this.visible = true
-      this.$nextTick(() => {
-
-
-        const {contentWrapper, triggerWrapper} = this.$refs
-        document.body.appendChild(contentWrapper)
-        let {width, height, top, left} = triggerWrapper.getBoundingClientRect()
-        if (this.position === 'top') {
-          contentWrapper.style.left = left + window.scrollX + 'px'
-          contentWrapper.style.top = top + window.scrollY + 'px'
-        } else if (this.position === 'bottom') {
-          contentWrapper.style.left = left + window.scrollX + 'px'
-          contentWrapper.style.top = top + 2.3*height + window.scrollY + 'px'
-        } else if (this.position === 'left') {
-          contentWrapper.style.left = left + window.scrollX + 'px'
-          let {height: height2} = contentWrapper.getBoundingClientRect()
-          contentWrapper.style.top = top + window.scrollY +
-              (height - height2) / 2 + 'px'
-        } else if (this.position === 'right') {
-          contentWrapper.style.left = left + window.scrollX + width + 'px'
-          let {height: height2} = contentWrapper.getBoundingClientRect()
-          contentWrapper.style.top = top + window.scrollY + 1.65*height+
-              (height - height2) / 2 + 'px'
-        }
-
-
-      })
-    },
-
-    close() {
-      this.visible = false
-      document.removeEventListener('click', this.onClickDocument)
-    },
-    onClickDocument(e) {
-      if (this.$refs.popover &&
-          (this.$refs.popover === e.target || this.$refs.popover.contains(e.target))
-      ) {return}
-      if (this.$refs.contentWrapper &&
-          (this.$refs.contentWrapper === e.target || this.$refs.contentWrapper.contains(e.target))
-      ) { return }
-      this.close()
-    },
-    onClick() {
-      if (this.$refs.triggerWrapper.contains(event.target)) {
-        if (this.visible === true) {
-          this.close()
-        } else (this.open())
+    positionContent() {
+      console.log('positionContent');
+      const {contentWrapper, triggerWrapper} = this.$refs
+      document.body.appendChild(contentWrapper)
+      let {width, height, top, left} = triggerWrapper.getBoundingClientRect()
+      if (this.position === 'top') {
+        contentWrapper.style.left = left + window.scrollX + 'px'
+        contentWrapper.style.top = top + window.scrollY + 'px'
+      } else if (this.position === 'bottom') {
+        contentWrapper.style.left = left + window.scrollX + 'px'
+        contentWrapper.style.top = top + 2.3 * height + window.scrollY + 'px'
+      } else if (this.position === 'left') {
+        contentWrapper.style.left = left + window.scrollX + 'px'
+        let {height: height2} = contentWrapper.getBoundingClientRect()
+        contentWrapper.style.top = top + window.scrollY +
+            (height - height2) / 2 + 'px'
+      } else if (this.position === 'right') {
+        contentWrapper.style.left = left + window.scrollX + width + 'px'
+        let {height: height2} = contentWrapper.getBoundingClientRect()
+        contentWrapper.style.top = top + window.scrollY + 1.65 * height +
+            (height - height2) / 2 + 'px'
       }
+    },
+
+  close() {
+    console.log('close');
+    this.visible = false
+    document.removeEventListener('click', this.onClickDocument)
+  },
+  onClickDocument(e) {
+    console.log('onClickDocument');
+    if (this.$refs.popover &&
+        (this.$refs.popover === e.target || this.$refs.popover.contains(e.target))) {
+      return
     }
-  }
+    if (this.$refs.contentWrapper &&
+        (this.$refs.contentWrapper === e.target || this.$refs.contentWrapper.contains(e.target))) {
+      return
+    }
+    this.close()
+  },
+  onClick(event) {
+    console.log('onClick');
+    if (this.$refs.triggerWrapper.contains(event.target)) {
+      if (this.visible === true) {this.close()} else (this.open())}
+  },
+  open() {
+    console.log('open');
+    this.visible = true
+    this.$nextTick(() => {
+      this.positionContent()
+      document.addEventListener('click', this.onClickDocument)
+    })
+  },},
 }
 </script>
 
@@ -103,6 +105,7 @@ $border-radius: 4px;
   padding: .5em 1em;
   max-width: 20em;
   word-break: break-all;
+
   &::before, &::after {
     content: '';
     display: block;
@@ -112,61 +115,77 @@ $border-radius: 4px;
     position: absolute;
 
   }
+
   &.position-top {
     transform: translateY(-100%);
     margin-top: -10px;
+
     &::before, &::after {
       left: 10px;
     }
+
     &::before {
       border-top-color: black;
       top: 100%;
     }
+
     &::after {
       border-top-color: white;
       top: calc(100% - 1px);
     }
   }
+
   &.position-bottom {
     margin-top: 10px;
+
     &::before, &::after {
       left: 10px;
     }
+
     &::before {
       border-bottom-color: black;
       bottom: 100%;
     }
+
     &::after {
       border-bottom-color: white;
       bottom: calc(100% - 1px);
     }
   }
+
   &.position-left {
     transform: translateX(-100%);
     margin-left: -10px;
+
     &::before, &::after {
       transform: translateY(-50%);
       top: 50%;
     }
+
     &::before {
       border-left-color: black;
       left: 100%;
     }
+
     &::after {
       border-left-color: white;
       left: calc(100% - 1px);
     }
   }
+
   &.position-right {
     margin-left: 10px;
+
     &::before, &::after {
       transform: translateY(-50%);
       top: 50%;
     }
+
     &::before {
       border-right-color: black;
       right: 100%;
     }
+
     &::after {
       border-right-color: white;
       right: calc(100% - 1px);

@@ -5,7 +5,7 @@
 <template>
   <Popover content="1popover内容"
            position="top">
-    <Button>手动激活(上)</Button>
+    <Button>click(上)</Button>
   </Popover>
   <Popover content="1popover内容"
            position="bottom">
