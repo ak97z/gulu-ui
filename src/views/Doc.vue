@@ -38,6 +38,9 @@
           <li>
             <router-link to="/doc/layout">Layout</router-link>
           </li>
+          <li>
+            <router-link to="/doc/popover">Popover</router-link>
+          </li>
         </ol>
       </aside>
       <main>

@@ -13,7 +13,6 @@ import Dialog2Demo from './Dialog/Dialog2.demo.vue';
 export default {
   components: {Demo},
   setup() {
-
     return {Dialog1Demo, Dialog2Demo};
   }
 };

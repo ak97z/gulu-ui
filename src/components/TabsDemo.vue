@@ -10,9 +10,6 @@ import Tab1Demo from './Tab/Tab1.demo.vue';
 
 export default {
   components: {Demo},
-  setup() {
-
-    return {Tab1Demo};
-  }
+  setup() {return {Tab1Demo};}
 };
 </script>

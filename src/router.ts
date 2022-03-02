@@ -8,6 +8,7 @@ import SwitchDemo from './components/SwitchDemo.vue';
 import InputDemo from './components/InputDemo.vue';
 import GridDemo from './components/GridDemo.vue';
 import LayoutDemo from './components/LayoutDemo.vue';
+import PopoverDemo from './components/PopoverDemo.vue';
 import intro from './markdown/intro.md';
 import getStarted from './markdown/get-started.md';
 import install from './markdown/install.md';
@@ -33,6 +34,7 @@ export const router = createRouter({
                 {path: 'input', component: InputDemo},
                 {path: 'grid', component: GridDemo},
                 {path: 'layout', component: LayoutDemo},
+                {path: 'popover', component: PopoverDemo},
             ]
         }
     ]
