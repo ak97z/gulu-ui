@@ -1,11 +1,17 @@
 <demo>
-默认用法
+手动激活
 </demo>
 
-<template >
-  <Popover content="1popover内容2popover内容3popover内容4popover内容5popover内容6popover内容">
-    <Button>默认按钮</Button>
+<template>
+  <Popover content="1popover内容"
+           position="top">
+    <Button>手动激活(上)</Button>
   </Popover>
+  <Popover content="1popover内容"
+           position="bottom">
+    <Button>手动激活(下)</Button>
+  </Popover>
+
 </template>
 <script>
 import Popover from "../../lib/Popover.vue";
