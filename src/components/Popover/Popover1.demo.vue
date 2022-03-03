@@ -8,8 +8,9 @@
     <Button>click(上)</Button>
   </Popover>
   <Popover content="1popover内容"
-           position="bottom">
-    <Button>手动激活(下)</Button>
+           position="bottom"
+  trigger="hover">
+    <Button>hover(下)</Button>
   </Popover>
 
 </template>
