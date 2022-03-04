@@ -72,7 +72,7 @@ export default {
         } else if (this.position === 'left') {
           contentWrapper.style.left = left + window.scrollX + 'px'
           let {height: height2} = contentWrapper.getBoundingClientRect()
-          contentWrapper.style.top = top + window.scrollY +
+          contentWrapper.style.top = top + window.scrollY + 0.35 * height+
               (height - height2) / 2 + 'px'
         } else if (this.position === 'right') {
           contentWrapper.style.left = left + window.scrollX + width + 'px'
