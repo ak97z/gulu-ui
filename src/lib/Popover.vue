@@ -1,6 +1,8 @@
 <template>
   <div class="popover" ref="popover">
-    <div ref="contentWrapper" class="content-wrapper" v-if="visible"
+    <div ref="contentWrapper"
+         class="content-wrapper"
+         v-if="visible"
          :class="{[`position-${position}`]:true}">
       <slot name="content">
         <div>{{ content }}</div>
@@ -87,7 +89,7 @@ export default {
         this.visible = false
         document.removeEventListener('click', this.onClickDocument)
       },
-      onClickDocument(e) {
+       onClickDocument(e) {
         console.log('onClickDocument');
         if (this.$refs.popover &&
             (this.$refs.popover === e.target || this.$refs.popover.contains(e.target))) {

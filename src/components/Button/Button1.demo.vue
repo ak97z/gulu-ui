@@ -3,8 +3,8 @@
 </demo>
 <template>
   <Button>默认按钮</Button>
-  <Button>默认链接按钮</Button>
-  <Button>默认文字按钮</Button>
+  <Button theme="link">默认链接按钮</Button>
+  <Button theme="text">默认文字按钮</Button>
 </template>
 <script>
 

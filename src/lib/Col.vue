@@ -1,6 +1,6 @@
 <template>
   <div class="col" :class="colClass" :style="colStyle">
-      <slot style="border: lightblue 1px solid"></slot>
+      <slot></slot>
   </div>
 </template>
 <script>

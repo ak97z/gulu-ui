@@ -2,7 +2,7 @@
 只读
 </demo>
 <template>
-  <Input value="第三天,只读" readonly/>
+  <Input value="只读" readonly/>
 </template>
 <script>
 import Input from "../../lib/Input.vue";

@@ -1,18 +1,15 @@
 <demo>
-手动激活
+激活方式
 </demo>
 
 <template>
-  <Popover content="1popover内容"
-           position="top">
-    <Button>click(上)</Button>
-  </Popover>
-  <Popover content="1popover内容"
-           position="bottom"
-  trigger="hover">
-    <Button>hover(下)</Button>
-  </Popover>
 
+  <Popover content="悬停激活" trigger="hover">
+    <Button>hover</Button>
+  </Popover>
+  <Popover content="点击激活">
+    <Button>click</Button>
+  </Popover>
 
 </template>
 <script>

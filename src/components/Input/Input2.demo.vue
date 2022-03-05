@@ -2,7 +2,7 @@
 不可选
 </demo>
 <template>
-  <Input value="第二天,不可选" disabled/>
+  <Input value="不可选" disabled/>
 
 </template>
 <script>

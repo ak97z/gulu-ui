@@ -3,9 +3,9 @@
 </demo>
 <template>
   <Collapse>
-    <CollapseItem title="title1">1content</CollapseItem>
-    <CollapseItem title="title2">2content</CollapseItem>
-    <CollapseItem title="title3">3content</CollapseItem>
+    <CollapseItem title="title1">content1</CollapseItem>
+    <CollapseItem title="title2">content2</CollapseItem>
+    <CollapseItem title="title3">content3</CollapseItem>
   </Collapse>
 </template>
 <script>
