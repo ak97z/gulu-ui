@@ -1,9 +1,11 @@
 <template>
+  <div class="wrapper">
   <input :value="value" type="text" :disabled="disabled" :readonly="readonly"/>
-  <template v-if="error">
+  <div v-if="error">
     <Icon icon="error" class="gulu-icon-error"/>
     <span class="gulu-errorMessage">{{error}}</span>
-  </template>
+  </div>
+  </div>
 </template>
 
 <script>
@@ -29,3 +31,26 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+$height: 32px;
+$border-color: #999;
+$border-color-hover: #666;
+$border-radius: 4px;
+$font-size: 12px;
+$box-shadow-color: rgba(0, 0, 0, 0.5);
+$red: #F1453D;
+.wrapper { font-size: $font-size; display: inline-flex;flex-direction: column;align-items: start;
+  > :not(:last-child) {margin-right: .5em; }
+  > input { height: 32px; border: 1px solid $border-color; border-radius: 4px; padding: 0 8px; font-size: inherit;
+    &:hover { border-color: $border-color-hover; }
+    &:focus { box-shadow: inset 0 1px 3px $box-shadow-color; outline: none; }
+    &[disabled], &[readonly] {border-color: #bbb;color: #bbb;cursor: not-allowed; }
+  }
+  &.error {
+    > input { border-color: $red; }
+  }
+  .gulu-icon-error { fill: $red; }
+  .gulu-errorMessage { color: $red; }
+}
+</style>

@@ -1,5 +1,5 @@
 <demo>
-不可选属性
+不可选
 </demo>
 <template>
   <Input value="第二天,不可选" disabled/>

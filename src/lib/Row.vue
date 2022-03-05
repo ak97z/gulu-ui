@@ -1,53 +1,45 @@
 <template>
-  <div class="row" :style="{marginLeft: -gutter/2+'px', marginRight: -gutter/2+'px'}">
+  <div class="row" :style="rowStyle" :class="rowClass">
     <slot></slot>
   </div>
 </template>
 <script>
 import Col from "./Col.vue";
-import {provide, ref} from "vue";
 
 export default {
-components:{
-  Col
-},
-  // computed: {
-  //   style() {
-      // const ret = {};
+components:{Col},
+  computed: {
+    rowStyle () {
+      let {gutter} = this
+      return {marginLeft: -gutter / 2 + 'px', marginRight: -gutter / 2 + 'px'}
+    },
+    rowClass () {
+      let {align} = this
+      return [align && `align-${align}`]
+    }
+  },
 
-      // if (this.gutter) {
-      //   ret.marginLeft = `-${this.gutter / 2}px`;
-      //   ret.marginRight = ret.marginLeft;
-      // }
-
-  //     // return ret;
-  //   }
-  // },
 
   props: {
     gutter: {
       type: [Number, String]
     }
   },
-  // created () {
-  //   console.log('row created')
-  //
-  // },
-  // mounted () {
-  //
-  //   console.log('row mounted')
-  //   console.log(this)
-  //   console.log(this.$children)
-  //   // this.$children.forEach((vm) => {
-  //   //   vm.gutter = this.gutter
-  //   // })
-  // }
 }
 
 </script>
-<style lang="scss" scoped>
-.row {
-  border: green 1px solid;
+<style scoped lang="scss">
+.row{
   display: flex;
+  flex-wrap: wrap;
+  &.align-left {
+    justify-content: flex-start;
+  }
+  &.align-right {
+    justify-content: flex-end;
+  }
+  &.align-center {
+    justify-content: center;
+  }
 }
 </style>

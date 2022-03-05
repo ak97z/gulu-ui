@@ -1,5 +1,5 @@
 <demo>
-只读属性
+只读
 </demo>
 <template>
   <Input value="第三天,只读" readonly/>

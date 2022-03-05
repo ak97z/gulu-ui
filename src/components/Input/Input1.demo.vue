@@ -1,5 +1,5 @@
 <demo>
-基础用法
+输入不合法
 </demo>
 <template>
   <Input value="第一天,错误信息" error="输入不合法,请重新输入"/>

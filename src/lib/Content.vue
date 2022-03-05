@@ -10,7 +10,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .content {
-  background: #0d92ff;
+  background: rgb(104 137 165);
 
   flex-grow: 1;
 }

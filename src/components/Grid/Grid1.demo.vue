@@ -3,9 +3,9 @@
 </demo>
 <template>
   <Row>
-    <Col span="1">1/24</Col>
-    <Col span="3">3/24</Col>
-    <Col span="20">20/24</Col>
+    <Col span="3"  style="background: #999999">3/24</Col>
+    <Col span="1" style="background: #add8e6">1/24</Col>
+    <Col span="20" style="background: #e1e4e8">20/24</Col>
   </Row>
 </template>
 <script>
