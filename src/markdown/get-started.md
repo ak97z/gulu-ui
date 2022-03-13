@@ -20,7 +20,7 @@ import {Button, Tabs, Switch, Dialog,Collapse,Grid,Input,Layout,Popover} from "b
   </div>
 </template>
 <script>
-import {Button, Tabs, Switch, Dialog} from "king-ui"
+import {Button} from "binghu-ui"
 export default {
   components: {Button}
 }

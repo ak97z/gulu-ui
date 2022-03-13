@@ -5,7 +5,7 @@
       <h1>冰壶UI</h1>
       <h2>自制UI框架</h2>
       <p class="actions">
-        <a href="https://github.com">GitHub</a>
+        <a href="https://github.com/ak97z/gulu-ui">GitHub</a>
         <router-link to="/doc">开始</router-link>
       </p>
     </div>
