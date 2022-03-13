@@ -2,7 +2,7 @@
   <div class="topnavAndBanner">
     <Topnav/>
     <div class="banner">
-      <h1>轱辘UI</h1>
+      <h1>冰壶UI</h1>
       <h2>自制UI框架</h2>
       <p class="actions">
         <a href="https://github.com">GitHub</a>
@@ -17,15 +17,15 @@
         <svg>
           <use xlink:href="#icon-Vue"></use>
         </svg>
-        <h3>基于 Vue 3</h3>
-        <p>骄傲地使用了 Vue 3 Composition API</p>
+        <h3> Vue 3</h3>
+        <p>使用 Vue 3 Composition API</p>
       </li>
       <li>
         <svg>
           <use xlink:href="#icon-ts"></use>
         </svg>
         <h3>基于 TypeScript </h3>
-        <p>源代码采用 TypeScript 书写</p>
+        <p>代码采用 TypeScript 书写</p>
       </li>
       <li>
         <svg>

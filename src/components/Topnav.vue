@@ -3,7 +3,7 @@
 
     <router-link to="/" class="logo" >
       <svg class="icon" aria-hidden="true">
-      <use xlink:href="#icon-wheel"></use>
+      <use xlink:href="#icon-binghu"></use>
 
     </svg></router-link>
     <ul class="menu">
